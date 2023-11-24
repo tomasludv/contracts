@@ -18,13 +18,15 @@ contract UniswapV2 is IUniswapV2 {
     }
 
     function swap(uint amountIn, bool tokenAForTokenB) external returns (uint256 amountOut) {
-        feesA = (amountIn * fee) / 10000;
-        amountIn -= (amountIn * fee) / 10000;
+        uint256 fees = (amountIn * fee) / 10000;
+        amountIn -= fees;
         if (tokenAForTokenB) {
+            feesA += fees;
             amountOut = (amountIn * amountB) / (amountA + amountIn);
             amountA += amountIn;
             amountB -= amountOut;
         } else {
+            feesB += fees;
             amountOut = (amountIn * amountA) / (amountB + amountIn);
             amountA -= amountOut;
             amountB += amountIn;
