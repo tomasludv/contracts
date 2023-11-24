@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 interface IUniswapV2 {
-    function fee() external view returns (uint256);
+    function fee() external view returns (uint24);
 
     function amountA() external view returns (uint256);
 

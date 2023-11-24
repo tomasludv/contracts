@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-contract UniswapV2 {
+import {IUniswapV2} from "./IUniswapV2.sol";
+
+contract UniswapV2 is IUniswapV2 {
     uint24 public fee = 500;
     uint256 public amountA;
     uint256 public amountB;
