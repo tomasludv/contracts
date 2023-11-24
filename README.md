@@ -1,5 +1,5 @@
 ```shell
-$ forge test --rpc-url $GOERLI_RPC_URL -vvv
+$ forge test --match-path test/UniswapV2.t.sol --rpc-url $GOERLI_RPC_URL -vvv
 $ forge script script/UniswapV2.s.sol:UniswapV2Script --rpc-url $GOERLI_RPC_URL --broadcast --verify -vvv
 ```
 
