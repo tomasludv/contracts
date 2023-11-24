@@ -2,13 +2,13 @@
 pragma solidity ^0.8.13;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {UniswapV2} from "../src/UniswapV2.sol";
+import {IUniswapV2} from "../src/IUniswapV2.sol";
 
-contract CounterTest is Test {
-    UniswapV2 public uniswapv2;
+contract UniswapV2Test is Test {
+    IUniswapV2 public uniswapv2;
 
     function setUp() public {
-        uniswapv2 = new UniswapV2();
+        uniswapv2 = IUniswapV2(0x6ea7c26EC841C3936945dB349759df745f55ee60);
     }
 
     function testAdd() public {

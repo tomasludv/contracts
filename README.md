@@ -1,5 +1,10 @@
 ## Foundry
 
+```shell
+$ forge test --rpc-url $GOERLI_RPC_URL -vvv
+$ forge script script/UniswapV2.s.sol:UniswapV2Script --rpc-url $GOERLI_RPC_URL --broadcast --verify -vvv
+```
+
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
 Foundry consists of:
